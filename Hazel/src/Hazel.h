@@ -2,8 +2,8 @@
 
 // For use by Hazel applications (i.e. games)
 
-#include <stdio.h>
-#include "Hazel//Application.h"
+#include "Hazel/Application.h"
+#include "Hazel/Log.h"
 
 // ---Entry point-------------------------
 #include "Hazel/Entrypoint.h"
