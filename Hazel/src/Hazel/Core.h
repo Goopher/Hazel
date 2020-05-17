@@ -1,13 +1,17 @@
 #pragma once
 
 #ifdef HZ_PLATFORM_WINDOWS
+#if HZ_DYNAMIC_LINK
 	#ifdef HZ_BUILD_DLL
 		#define HAZEL_API __declspec(dllexport)
-	#else 
+	#else
 		#define HAZEL_API __declspec(dllimport)
-	#endif // HZ_BUILD_DLL
+	#endif
 #else
-	#error Hazel only supports Windows
+    #define HAZEL_API
+#endif
+#else
+	#error Hazel only supports Windows!
 #endif
 
 #ifdef HZ_DEBUG
@@ -22,6 +26,6 @@
 	#define HZ_CORE_ASSERT(x, ...)
 #endif
 
-#define BIT(x) (1 << x) 
+#define BIT(x) (1 << x)
 
-#define HZ_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1) 
+#define HZ_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)

@@ -23,4 +23,5 @@ namespace Hazel {
 	private:
 		static Input* s_Instance;
 	};
+
 }

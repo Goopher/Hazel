@@ -1,8 +1,8 @@
 #include "hzpch.h"
 #include "WindowsInput.h"
 
-#include <GLFW/glfw3.h>
 #include "Hazel/Application.h"
+#include <GLFW/glfw3.h>
 
 namespace Hazel {
 
@@ -27,20 +27,20 @@ namespace Hazel {
 		auto window = static_cast<GLFWwindow*>(Application::Get().GetWindow().GetNativeWindow());
 		double xpos, ypos;
 		glfwGetCursorPos(window, &xpos, &ypos);
+
 		return { (float)xpos, (float)ypos };
 	}
 
 	float WindowsInput::GetMouseXImpl()
 	{
-		auto [x, y] = GetMousePositionImpl();
+		auto[x, y] = GetMousePositionImpl();
 		return x;
 	}
 
 	float WindowsInput::GetMouseYImpl()
 	{
-		auto [x, y] = GetMousePositionImpl();
+		auto[x, y] = GetMousePositionImpl();
 		return y;
 	}
-
 
 }
