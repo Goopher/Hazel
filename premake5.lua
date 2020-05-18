@@ -48,7 +48,7 @@ project "Hazel"
 
     defines 
     {
-        "_CRT_SECURE_NO_WARNIGNS"
+        "_CRT_SECURE_NO_WARNINGS"
     }
 
     includedirs
